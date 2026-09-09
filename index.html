@@ -44,10 +44,6 @@
         "Off-market and infill acquisition"
       ],
       "worksFor": { "@id": "https://kennypleasant.com/#nexthome-prolific" },
-      "founder": [
-        { "@id": "https://kennypleasant.com/#nexthome-prolific" },
-        { "@id": "https://kennypleasant.com/#agent-revolution" }
-      ],
       "homeLocation": {
         "@type": "Place",
         "address": { "@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA", "addressCountry": "US" }
@@ -70,7 +66,9 @@
       "@id": "https://kennypleasant.com/#nexthome-prolific",
       "name": "NextHome Prolific",
       "url": "https://www.nexthomeprolific.com/",
-      "founder": { "@id": "https://kennypleasant.com/#kenny-pleasant" },
+      "image": "https://kennypleasant.com/assets/img/kenny-pleasant-og.jpg",
+      "priceRange": "$$$",
+      "founder": { "@type": "Person", "@id": "https://kennypleasant.com/#kenny-pleasant" },
       "foundingDate": "2021",
       "areaServed": "Washington State",
       "address": {
@@ -90,17 +88,20 @@
       "url": "https://agentrevolution.net",
       "description": "A nationwide coaching program for real estate agents, launching October 2026.",
       "foundingDate": "2026",
-      "founder": { "@id": "https://kennypleasant.com/#kenny-pleasant" }
+      "founder": { "@type": "Person", "@id": "https://kennypleasant.com/#kenny-pleasant" }
     },
     {
       "@type": "Book",
       "@id": "https://kennypleasant.com/#no-money-no-problem",
       "name": "No Money No Problem",
       "alternateName": "No Money No Problem: How to Build a Real Estate Empire When You Have Nothing to Start With",
-      "author": { "@id": "https://kennypleasant.com/#kenny-pleasant" },
+      "author": { "@type": "Person", "@id": "https://kennypleasant.com/#kenny-pleasant" },
       "isbn": "979-8-9964894-0-4",
       "datePublished": "2026-07-01",
-      "numberOfPages": "404",
+      "numberOfPages": 404,
+      "inLanguage": "en",
+      "bookFormat": "https://schema.org/Paperback",
+      "image": "https://kennypleasant.com/assets/img/no-money-no-problem-cover.jpg",
       "publisher": { "@type": "Organization", "name": "4th and Long Publishing" },
       "url": "https://kennypleasant.com/book/"
     },
@@ -109,8 +110,8 @@
       "@id": "https://kennypleasant.com/#website",
       "url": "https://kennypleasant.com/",
       "name": "Kenny Pleasant",
-      "about": { "@id": "https://kennypleasant.com/#kenny-pleasant" },
-      "publisher": { "@id": "https://kennypleasant.com/#kenny-pleasant" }
+      "about": { "@type": "Person", "@id": "https://kennypleasant.com/#kenny-pleasant" },
+      "publisher": { "@type": "Person", "@id": "https://kennypleasant.com/#kenny-pleasant" }
     }
   ]
 }
