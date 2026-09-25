@@ -1,0 +1,31 @@
+COMMIT IN THIS ORDER, all in the kennypleasant-com repo root.
+
+1. assets/styles.css
+   Open the file in the GitHub web editor, scroll to the very bottom,
+   paste the entire contents of APPEND-TO-styles.css.txt on a new line.
+   Do NOT replace the file. This adds the missing .faq rules.
+
+2. faq/index.html
+   Add file > Create new file, name it exactly:  faq/index.html
+   (typing the slash creates the folder)
+   Paste the contents of faq/index.html from this zip.
+
+3. 404.html
+   Add file > Create new file, name it exactly:  404.html
+   Paste the contents of 404.html from this zip.
+   Every link in it is root absolute (/assets/..., /writing/) on purpose,
+   because Cloudflare serves this one file for URLs at any depth and
+   relative paths would break on /a/b/c/.
+
+THEN, in the Cloudflare dashboard (this part is not in the repo):
+   Workers & Pages > kennypleasant-com > Settings.
+   Find the single-page application / SPA or catch-all routing option and
+   turn it OFF. Right now every unknown URL returns the homepage instead
+   of a 404, which is why /faq/ showed the homepage rather than an error.
+   With SPA off and 404.html present, unknown URLs return a real 404.
+
+VERIFY after the deploy finishes (about 30 seconds):
+   kennypleasant.com/faq/                  should show the FAQ, styled
+   kennypleasant.com/zzz-test-does-not-exist/   should show the 404 page
+   If the second one still shows the homepage, the Cloudflare setting did
+   not take effect and the repo files are not the problem.
