@@ -1,31 +1,15 @@
-COMMIT IN THIS ORDER, all in the kennypleasant-com repo root.
+BLOG POST 5: Builder Rate Buydown or Price Cut? (29 Sep 2026)
 
-1. assets/styles.css
-   Open the file in the GitHub web editor, scroll to the very bottom,
-   paste the entire contents of APPEND-TO-styles.css.txt on a new line.
-   Do NOT replace the file. This adds the missing .faq rules.
+Commit in the GitHub web editor, repo kennypleasant/kennypleasant-com, in this order:
 
-2. faq/index.html
-   Add file > Create new file, name it exactly:  faq/index.html
-   (typing the slash creates the folder)
-   Paste the contents of faq/index.html from this zip.
+1. Create writing/builder-rate-buydown-vs-price-cut/index.html
+   (Add file > Create new file, paste the path as the name, paste the contents)
+2. Replace writing/index.html with the new version
+   (adds the post card at the top and the blogPost entry in the JSON-LD; nothing else changed)
+3. Replace sitemap.xml with the new version (one new line)
 
-3. 404.html
-   Add file > Create new file, name it exactly:  404.html
-   Paste the contents of 404.html from this zip.
-   Every link in it is root absolute (/assets/..., /writing/) on purpose,
-   because Cloudflare serves this one file for URLs at any depth and
-   relative paths would break on /a/b/c/.
+Cloudflare redeploys in about 30 seconds after the last commit.
 
-THEN, in the Cloudflare dashboard (this part is not in the repo):
-   Workers & Pages > kennypleasant-com > Settings.
-   Find the single-page application / SPA or catch-all routing option and
-   turn it OFF. Right now every unknown URL returns the homepage instead
-   of a 404, which is why /faq/ showed the homepage rather than an error.
-   With SPA off and 404.html present, unknown URLs return a real 404.
-
-VERIFY after the deploy finishes (about 30 seconds):
-   kennypleasant.com/faq/                  should show the FAQ, styled
-   kennypleasant.com/zzz-test-does-not-exist/   should show the 404 page
-   If the second one still shows the homepage, the Cloudflare setting did
-   not take effect and the repo files are not the problem.
+Check after deploy:
+- kennypleasant.com/writing/ shows the new post first
+- kennypleasant.com/writing/builder-rate-buydown-vs-price-cut/ renders styled
