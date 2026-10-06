@@ -1,15 +1,22 @@
-BLOG POST 5: Builder Rate Buydown or Price Cut? (29 Sep 2026)
+kennypleasant.com blog post, 6 October 2026
+Post: Rates Hit 7.28%. Should You Take the Adjustable Rate Mortgage?
+Slug: adjustable-rate-mortgage-seattle
 
-Commit in the GitHub web editor, repo kennypleasant/kennypleasant-com, in this order:
+Commit in the GitHub web editor (github.com/kennypleasant/kennypleasant-com), in this order:
 
-1. Create writing/builder-rate-buydown-vs-price-cut/index.html
-   (Add file > Create new file, paste the path as the name, paste the contents)
-2. Replace writing/index.html with the new version
-   (adds the post card at the top and the blogPost entry in the JSON-LD; nothing else changed)
-3. Replace sitemap.xml with the new version (one new line)
+1. CREATE the new file first:
+   Add file > Create new file
+   Name it exactly: writing/adjustable-rate-mortgage-seattle/index.html
+   Paste the contents of writing/adjustable-rate-mortgage-seattle/index.html from this zip. Commit.
 
-Cloudflare redeploys in about 30 seconds after the last commit.
+2. REPLACE writing/index.html:
+   Open writing/index.html, click the pencil, select all, paste the contents of writing/index.html from this zip. Commit.
 
-Check after deploy:
-- kennypleasant.com/writing/ shows the new post first
-- kennypleasant.com/writing/builder-rate-buydown-vs-price-cut/ renders styled
+3. REPLACE sitemap.xml:
+   Open sitemap.xml, click the pencil, select all, paste the contents of sitemap.xml from this zip. Commit.
+
+Cloudflare redeploys in about 30 seconds after each commit.
+
+Then check:
+   https://kennypleasant.com/writing/   (new card at the top, dated 6 Oct 2026, Market)
+   https://kennypleasant.com/writing/adjustable-rate-mortgage-seattle/
